@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturas de Tarot y Guía Espiritual</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>El Oráculo Místico</h1>
+            <p>Descubre tu camino, aclara tus dudas y encuentra la paz espiritual.</p>
+            <a href="#contacto" class="cta-button">Agenda tu Lectura</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="servicios" class="services">
+            <h2>Nuestros Servicios</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <img src="https://i.imgur.com/g8S1Z8J.png" alt="Cartas de Tarot" class="service-icon">
+                    <h3>Lecturas de Tarot</h3>
+                    <p>Una mirada profunda a tu presente y futuro. Ideal para tomar decisiones, entender relaciones y proyecciones personales.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://i.imgur.com/L1b1g3g.png" alt="Vela espiritual" class="service-icon">
+                    <h3>Trabajos Espirituales</h3>
+                    <p>Limpiezas energéticas, abre-caminos y rituales de protección para armonizar tu vida y atraer la positividad.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://i.imgur.com/dZ2I3rQ.png" alt="Mano y péndulo" class="service-icon">
+                    <h3>Guía y Consejería</h3>
+                    <p>Sesiones de consejería espiritual para ayudarte a conectar con tu yo interior y encontrar tu propósito.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="about">
+            <div class="about-content">
+                <h2>Sobre la Guía</h2>
+                <p>Con más de 20 años de experiencia, he dedicado mi vida a estudiar las artes místicas y ayudar a las personas a encontrar su luz. Mi enfoque es honesto, empático y directo, siempre buscando tu mayor bienestar.</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <h2>Contacta con el Oráculo</h2>
+            <p>Envía tu consulta y te responderé a la brevedad para coordinar tu sesión.</p>
+            
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email o WhatsApp:</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tu Consulta:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cta-button" id="submit-button">Enviar Mensaje</button>
+            </form>
+            <div id="form-status"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 El Oráculo Místico. Todos los derechos reservados. Servicios solo para mayores de 18 años.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
