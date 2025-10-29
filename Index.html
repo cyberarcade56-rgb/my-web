@@ -1,78 +1,484 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecturas de Tarot y Guía Espiritual</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Umbanda y Kimbanda en México. Templo del Pae Roberto de Ogum Onira. Realizamos guía espiritual, amarres de amor, limpias, rituales y tarot.">
+    <title>Umbanda México - Pae Roberto de Ogum Onira</title>
+    
+    <link rel="stylesheet" href="Styles.css?v=1.2">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <header class="hero">
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-om"></i> Umbanda México
+            </a>
+            <ul class="nav-menu">
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nuestra-historia.html">Nuestra Fe</a></li>
+                <li><a href="tarot.html">Tarot</a></li>
+                <li><a href="#contacto" class="nav-cta">Agendar Consulta</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>El Oráculo Místico</h1>
-            <p>Descubre tu camino, aclara tus dudas y encuentra la paz espiritual.</p>
-            <a href="#contacto" class="cta-button">Agenda tu Lectura</a>
+            <div class="hero-badge reveal">
+                <i class="fas fa-star"></i>
+                <span>Más de 15 años de experiencia</span>
+                <i class="fas fa-star"></i>
+            </div>
+            <h1 class="reveal reveal-delay-1">Umbanda México</h1>
+            <p class="hero-subtitle reveal reveal-delay-2">Guiados por el Pae Roberto de Ogum Onira</p>
+            <p class="hero-description reveal reveal-delay-3">
+                Templo de luz, fe y caridad. Trabajos espirituales de Umbanda y Kimbanda para transformar tu vida.
+            </p>
+            <div class="hero-buttons reveal reveal-delay-4">
+                <a href="#contacto" class="cta-button cta-primary">
+                    <i class="fas fa-calendar-check"></i> Agenda tu Consulta
+                </a>
+                <a href="#servicios" class="cta-button cta-secondary">
+                    <i class="fas fa-info-circle"></i> Conocer Servicios
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </header>
 
     <main>
-        <section id="servicios" class="services">
-            <h2>Nuestros Servicios</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <img src="https://i.imgur.com/g8S1Z8J.png" alt="Cartas de Tarot" class="service-icon">
-                    <h3>Lecturas de Tarot</h3>
-                    <p>Una mirada profunda a tu presente y futuro. Ideal para tomar decisiones, entender relaciones y proyecciones personales.</p>
-                </div>
-                <div class="service-card">
-                    <img src="https://i.imgur.com/L1b1g3g.png" alt="Vela espiritual" class="service-icon">
-                    <h3>Trabajos Espirituales</h3>
-                    <p>Limpiezas energéticas, abre-caminos y rituales de protección para armonizar tu vida y atraer la positividad.</p>
-                </div>
-                <div class="service-card">
-                    <img src="https://i.imgur.com/dZ2I3rQ.png" alt="Mano y péndulo" class="service-icon">
-                    <h3>Guía y Consejería</h3>
-                    <p>Sesiones de consejería espiritual para ayudarte a conectar con tu yo interior y encontrar tu propósito.</p>
+
+        <!-- Nueva sección de introducción -->
+        <section class="intro-section">
+            <div class="intro-container">
+                <div class="intro-content reveal">
+                    <span class="intro-label">Bienvenido a nuestro templo</span>
+                    <h2>Un Camino de Luz y Transformación</h2>
+                    <p class="intro-text">
+                        En Umbanda México trabajamos con la fuerza de los Orixás, la sabiduría de los Guías de luz y el poder de la Kimbanda para ayudarte a resolver problemas del alma, el corazón y la vida material. Nuestro templo es un espacio sagrado donde la fe, el respeto y la caridad son la base de cada trabajo espiritual.
+                    </p>
+                    <div class="intro-stats">
+                        <div class="stat-item reveal">
+                            <i class="fas fa-users"></i>
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Personas Ayudadas</div>
+                        </div>
+                        <div class="stat-item reveal reveal-delay-1">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Años de Experiencia</div>
+                        </div>
+                        <div class="stat-item reveal reveal-delay-2">
+                            <i class="fas fa-heart"></i>
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Dedicación y Fe</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="sobre-mi" class="about">
-            <div class="about-content">
-                <h2>Sobre la Guía</h2>
-                <p>Con más de 20 años de experiencia, he dedicado mi vida a estudiar las artes místicas y ayudar a las personas a encontrar su luz. Mi enfoque es honesto, empático y directo, siempre buscando tu mayor bienestar.</p>
+        <section id="servicios" class="services">
+            <span class="section-label">Nuestras Especialidades</span>
+            <h2>Pilares de Ayuda Espiritual</h2>
+            <p class="section-subtitle">Cada servicio es realizado con respeto, fe y conocimiento ancestral. Haz clic en cualquier especialidad para conocer todos nuestros trabajos.</p>
+            
+            <div class="service-carousel-container" id="service-carousel">
+                <div class="service-carousel-viewport">
+                    <ul class="service-carousel-track" id="service-track">
+                        
+                        <li class="service-slide-item">
+                            <a href="servicios.html" class="service-card-link">
+                                <div class="service-card">
+                                    <div class="service-icon-wrapper">
+                                        <i class="fas fa-hands-praying service-icon"></i>
+                                    </div>
+                                    <h3>Consultas de Umbanda</h3>
+                                    <p>Orientación con Guías de luz para consejo, paz y curación espiritual.</p>
+                                    <span class="service-link-text">Ver más <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="service-slide-item">
+                             <a href="tarot.html" class="service-card-link">
+                                <div class="service-card">
+                                    <div class="service-icon-wrapper">
+                                        <i class="fas fa-coins service-icon"></i>
+                                    </div>
+                                    <h3>Tarot Gitano</h3>
+                                    <p>Lecturas guiadas por el Povo Cigano, para claridad en amor y prosperidad.</p>
+                                    <span class="service-link-text">Ver más <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="service-slide-item">
+                             <a href="servicios.html" class="service-card-link">
+                                <div class="service-card">
+                                    <div class="service-icon-wrapper">
+                                        <i class="fas fa-hand-holding-heart service-icon"></i>
+                                    </div>
+                                    <h3>Limpiezas y Pases</h3>
+                                    <p>Pases energéticos y defumación para reequilibrar tu aura y limpiar energías.</p>
+                                    <span class="service-link-text">Ver más <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="service-slide-item">
+                             <a href="servicios.html" class="service-card-link">
+                                <div class="service-card">
+                                    <div class="service-icon-wrapper">
+                                        <i class="fas fa-key service-icon"></i>
+                                    </div>
+                                    <h3>Abre Caminos</h3>
+                                    <p>Trabajos de Kimbanda con Exu y Pombagira para destrabar lo que está bloqueado.</p>
+                                    <span class="service-link-text">Ver más <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="service-slide-item">
+                             <a href="nuestra-historia.html" class="service-card-link">
+                                <div class="service-card">
+                                    <div class="service-icon-wrapper">
+                                        <i class="fas fa-book-open-reader service-icon"></i>
+                                    </div>
+                                    <h3>Desarrollo Mediúmnico</h3>
+                                    <p>Giras de estudio y desarrollo de la mediumnidad, basadas en la doctrina y el respeto.</p>
+                                    <span class="service-link-text">Ver más <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="service-slide-item">
+                             <a href="servicios.html" class="service-card-link">
+                                <div class="service-card">
+                                    <div class="service-icon-wrapper">
+                                        <i class="fas fa-hand-holding-dollar service-icon"></i>
+                                    </div>
+                                    <h3>Rituales de Prosperidad</h3>
+                                    <p>Rituales del Povo Cigano para atraer la abundancia material y abrir caminos de negocio.</p>
+                                    <span class="service-link-text">Ver más <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="service-slide-item">
+                             <a href="servicios.html" class="service-card-link">
+                                <div class="service-card">
+                                    <div class="service-icon-wrapper">
+                                        <i class="fas fa-heart-crack service-icon"></i>
+                                    </div>
+                                    <h3>Amarres y Uniones</h3>
+                                    <p>Trabajos de armonización y unión amorosa, realizados desde la luz y el merecimiento.</p>
+                                    <span class="service-link-text">Ver más <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="service-slide-item">
+                             <a href="servicios.html" class="service-card-link">
+                                <div class="service-card">
+                                    <div class="service-icon-wrapper">
+                                        <i class="fas fa-shield-halved service-icon"></i>
+                                    </div>
+                                    <h3>Protecciones</h3>
+                                    <p>Asentamiento de protecciones espirituales y físicas con Exu, para resguardar tu hogar o negocio.</p>
+                                    <span class="service-link-text">Ver más <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <button class="service-carousel-button prev" id="service-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="service-carousel-button next" id="service-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+
+        <section id="nuestra-fe" class="definitions">
+            <a href="nuestra-historia.html" class="definitions-link">
+                <span class="section-label">Conoce nuestra tradición</span>
+                <h2>Nuestra Fe</h2>
+                <div class="definitions-grid reveal">
+                    <div class="definition-card">
+                        <div class="definition-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h3>¿Qué es Umbanda?</h3>
+                        <p>La Umbanda es una religión de luz, fe y caridad. Es la manifestación del espíritu para el consuelo y la ayuda al prójimo. Trabajamos con Guías de luz como Pretos Velhos, Caboclos y Crianças para orientar, sanar y elevar espiritualmente a quienes buscan ayuda.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Religión de caridad</li>
+                            <li><i class="fas fa-check"></i> Guías de luz</li>
+                            <li><i class="fas fa-check"></i> Curación espiritual</li>
+                        </ul>
+                    </div>
+                    <div class="definition-card">
+                        <div class="definition-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>¿Qué es Kimbanda?</h3>
+                        <p>La Kimbanda es la fuerza de la tierra, el dominio de Exu y Pombagira, guardianes de los caminos. Es la justicia terrenal. Trabaja en el plano material para destrabar, proteger y transformar situaciones bloqueadas.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Fuerza transformadora</li>
+                            <li><i class="fas fa-check"></i> Justicia espiritual</li>
+                            <li><i class="fas fa-check"></i> Apertura de caminos</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cta-link-wrapper">
+                    <span class="cta-link">Conoce más sobre Nuestra Historia y el Pae <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+        </section>
+
+        <!-- Nueva sección de proceso -->
+        <section class="process-section">
+            <span class="section-label">Cómo trabajamos</span>
+            <h2>Tu Camino Hacia la Transformación</h2>
+            <p class="section-subtitle">Un proceso respetuoso, profesional y efectivo</p>
+            
+            <div class="process-grid">
+                <div class="process-step reveal">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Consulta Inicial</h3>
+                        <p>Platicamos tu situación en privado. El Pae o los Guías evalúan tu caso y determinan el mejor camino espiritual.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal reveal-delay-1">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Trabajo Espiritual</h3>
+                        <p>Realizamos el ritual, limpieza o trabajo necesario con la dedicación y respeto que merece cada alma.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal reveal-delay-2">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Seguimiento</h3>
+                        <p>Te acompañamos en el proceso. Algunos trabajos requieren indicaciones específicas que te daremos con claridad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="testimonios" class="testimonials">
+             <span class="section-label">Testimonios reales</span>
+             <h2>Lo que dicen nuestros Clientes</h2>
+             <p class="section-subtitle">Historias de fe, transformación y luz</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote>
+                        "Desde que visité la casa de Umbanda, sentí una energía de amor y claridad que me cambió la vida. El Pae Roberto y los guías espirituales me ayudaron a encontrar equilibrio y esperanza. Hoy camino con fe y gratitud"
+                    </blockquote>
+                    <cite>— María G.</cite>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote>
+                        "Después de la limpieza energética, sentí cómo un peso enorme se iba. Mi energía cambió por completo. La caridad de esta casa es real. Los recomiendo al 100%."
+                    </blockquote>
+                    <cite>— Carlos R.</cite>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote>
+                        "La lectura del Tarot Gitano fue asombrosamente precisa. Me ayudó a tomar una decisión sobre mi trabajo que me tenía estancada. Gracias al Pae."
+                    </blockquote>
+                    <cite>— Sofía L.</cite>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nueva sección de garantías -->
+        <section class="guarantees-section">
+            <div class="guarantees-container">
+                <span class="section-label">Por qué elegirnos</span>
+                <h2>Nuestro Compromiso Contigo</h2>
+                <div class="guarantees-grid">
+                    <div class="guarantee-item reveal">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Experiencia Comprobada</h3>
+                        <p>Más de 15 años trabajando con fe y resultados reales</p>
+                    </div>
+                    <div class="guarantee-item reveal reveal-delay-1">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Confidencialidad Total</h3>
+                        <p>Tu consulta es privada y se maneja con respeto absoluto</p>
+                    </div>
+                    <div class="guarantee-item reveal reveal-delay-2">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Trabajo Ético</h3>
+                        <p>Solo trabajos de luz y justicia espiritual para quien te desee el mal</p>
+                    </div>
+                    <div class="guarantee-item reveal">
+                        <i class="fas fa-comments"></i>
+                        <h3>Atención Personalizada</h3>
+                        <p>Cada caso es único y recibe atención dedicada</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="contacto" class="contact">
-            <h2>Contacta con el Oráculo</h2>
-            <p>Envía tu consulta y te responderé a la brevedad para coordinar tu sesión.</p>
+            <span class="section-label">Agenda tu consulta</span>
+            <h2>Contacta con la Casa</h2>
+            <p>Envía tu consulta y te responderemos a la brevedad para coordinar tu cita o visita al templo.</p>
             
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
+            <form id="contact-form" name="contact" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+                
+                <input type="hidden" name="form-name" value="contact" />
+                <p style="display:none;"><label>No llenar esto: <input name="bot-field"></label></p>
+                
+                <div class="form-row">
+                    <div class="form-group reveal">
+                        <label for="name"><i class="fas fa-user"></i> Nombre Completo:</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group reveal">
+                        <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email o WhatsApp:</label>
-                    <input type="text" id="email" name="email" required>
+                
+                <div class="form-group reveal">
+                    <label for="message"><i class="fas fa-comment-dots"></i> Tu Consulta:</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="message">Tu Consulta:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <div class="form-group reveal">
+                    <label for="file"><i class="fas fa-camera"></i> Adjuntar Foto (Opcional):</label>
+                    <input type="file" id="file" name="file" class="form-control-file" accept="image/png, image/jpeg, image/gif">
+                    <small>Puedes adjuntar una foto si consideras que ayudará en tu consulta</small>
                 </div>
-                <button type="submit" class="cta-button" id="submit-button">Enviar Mensaje</button>
+                
+                <button type="submit" class="cta-button cta-primary reveal" id="submit-button">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                </button>
             </form>
             <div id="form-status"></div>
+            
+            <!-- NUEVO: Mensaje de respuesta rápida -->
+            <div id="quick-response-message" style="display: none; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05)); border: 2px solid var(--color-accent); border-radius: 15px; padding: 2rem; margin-top: 2rem; text-align: center;">
+                <i class="fas fa-check-circle" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 1rem;"></i>
+                <h3 style="color: var(--color-primary); margin-bottom: 1rem;">¡Mensaje Enviado!</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                    Tu consulta fue recibida correctamente. Para una <strong>respuesta más rápida</strong>, contáctanos directamente por nuestras redes sociales:
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://www.instagram.com/umbanda.mexico/" target="_blank" class="cta-button cta-primary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://m.me/Umbanda.mexico/" target="_blank" class="cta-button cta-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                </div>
+                <p style="margin-top: 1rem; color: var(--color-text-muted); font-size: 0.95rem;">
+                    <i class="fas fa-clock"></i> Respuesta promedio por redes: 1-2 horas
+                </p>
+            </div>
+
+            <div class="contact-info reveal">
+                <div class="contact-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Ubicación</h4>
+                        <p>Ciudad de México</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Horarios de Atención</h4>
+                       <p>Previa cita</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-share-nodes"></i>
+                    <div>
+                        <h4>Contactanos</h4>
+                        <p style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <a href="https://www.instagram.com/umbanda.mexico/" target="_blank" style="color: var(--color-accent); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a href="https://m.me/Umbanda.mexico" target="_blank" style="color: var(--color-accent); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 El Oráculo Místico. Todos los derechos reservados. Servicios solo para mayores de 18 años.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-om"></i> Umbanda México</h3>
+                <p>Templo de luz, fe y caridad bajo la guía del Pae Roberto de Ogum Onira.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="nuestra-historia.html">Nuestra Fe</a></li>
+                    <li><a href="tarot.html">Tarot</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/umbanda.mexico/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://m.me/Umbanda.mexico" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2016 - 2025 Umbanda México. Todos los derechos reservados. Axé.</p>
+            <p class="footer-disclaimer">Trabajos espirituales realizados con fe, respeto y ética.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
