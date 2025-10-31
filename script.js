@@ -12,6 +12,57 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // --- NUEVO: Menú Hamburguesa ---
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    
+    // Crear overlay si no existe
+    let overlay = document.querySelector('.nav-overlay');
+    if (!overlay && hamburger) {
+        overlay = document.createElement('div');
+        overlay.className = 'nav-overlay';
+        document.body.appendChild(overlay);
+    }
+
+    // Toggle menú
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Cerrar al hacer clic en overlay
+        overlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Cerrar al hacer clic en un link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Cerrar con tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
     // --- 2. Animaciones de Scroll ---
     const revealElements = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver((entries) => {
@@ -51,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
             statusDiv.innerText = "";
             
-            // Ocultar mensaje de respuesta rápida si estaba visible
             if (quickResponseMessage) {
                 quickResponseMessage.style.display = 'none';
             }
@@ -80,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     form.reset();
                     statusDiv.innerText = "";
                     
-                    // Mostrar mensaje de respuesta rápida por redes sociales
                     if (quickResponseMessage) {
                         quickResponseMessage.style.display = 'block';
                         quickResponseMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });

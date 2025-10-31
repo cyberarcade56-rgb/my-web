@@ -81,19 +81,7 @@
         font-size: 1rem;
     }
 
-    .nav-menu {
-        gap: 0.3rem;
-    }
-
-    .nav-menu a {
-        font-size: 0.7rem;
-        padding: 0.2rem;
-    }
-
-    .nav-menu a.nav-cta {
-        padding: 0.4rem 0.7rem;
-        font-size: 0.7rem;
-    }
+    /* SE ELIMINAN ESTILOS .nav-menu de aquí porque se manejarán en la sección de 768px */
 
     /* Page Header */
     .page-header {
@@ -151,6 +139,8 @@
 .mb-2 { margin-bottom: 2rem; }
 
 
+
+/* --- Variables y Reset --- */
 :root {
     --color-bg: #0a0a0a;
     --color-bg-light: #1a1a1a;
@@ -330,7 +320,7 @@ section { padding: 6rem 2rem; position: relative; }
     align-items: center;
     gap: 0.5rem;
     transition: var(--transition-smooth);
-    z-index: 1001;
+    z-index: 1001; /* Asegura que esté sobre el overlay */
 }
 
 .nav-logo:hover {
@@ -344,7 +334,7 @@ section { padding: 6rem 2rem; position: relative; }
     flex-direction: column;
     gap: 0.4rem;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1001; /* Asegura que esté sobre el overlay */
     padding: 0.5rem;
     background: transparent;
     border: none;
@@ -357,6 +347,31 @@ section { padding: 6rem 2rem; position: relative; }
     border-radius: 3px;
     transition: var(--transition-smooth);
 }
+
+/* CORRECCIÓN:
+    Añadidos estilos para el overlay del menú móvil.
+    El script.js lo crea y le añade/quita la clase 'active'.
+*/
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 999; /* Detrás del menú, delante del contenido */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 .nav-hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
@@ -1808,7 +1823,10 @@ footer {
         font-size: 0.95rem;
     }
 
-    /* Navbar */
+    /* ========================================
+      CORRECCIÓN DE NAVBAR MÓVIL
+      ========================================
+    */
     .navbar {
         padding: 1rem;
         justify-content: space-between;
@@ -1828,21 +1846,54 @@ footer {
         font-size: 1.2rem;
     }
 
-    .nav-menu {
+    /* 1. Mostrar el botón hamburguesa */
+    .nav-hamburger {
         display: flex;
-        gap: 1rem;
-        font-size: 0.85rem;
+    }
+
+    /* 2. Ocultar y posicionar el menú de escritorio */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%; /* Ocupa el 70% del ancho */
+        background: var(--color-bg-light); /* Fondo oscuro */
+        flex-direction: column; /* Apilar enlaces verticalmente */
+        align-items: center;
+        justify-content: center;
+        gap: 2rem; /* Espacio entre enlaces */
+        padding: 2rem;
+        transform: translateX(100%); /* Oculto fuera de la pantalla a la derecha */
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000; /* Detrás del botón hamburguesa pero encima del contenido */
+        border-left: 1px solid var(--color-accent);
+        box-shadow: var(--shadow-lg);
+    }
+
+    /* 3. Mostrar el menú cuando tiene la clase 'active' (que añade el JS) */
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
     }
 
     .nav-menu a {
-        padding: 0.3rem;
-        font-size: 0.85rem;
+        font-size: 1.2rem; /* Letra más grande para móvil */
+        padding: 0.5rem;
+        width: 100%;
     }
 
     .nav-menu a.nav-cta {
-        padding: 0.5rem 1rem;
-        font-size: 0.8rem;
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
     }
+    
+    /* Fin de la corrección de Navbar */
+
 
     /* Page Header */
     .page-header {
@@ -2203,9 +2254,16 @@ footer {
         padding: 0 1rem;
     }
 
+    /* ========================================
+      CORRECCIÓN DE SUPERPOSICIÓN (OVERLAP)
+      ========================================
+    */
     /* Overflow fix */
     * {
-        max-width: 100%;
+        /* REMOVIDO: max-width: 100%; 
+           Esta era la regla que causaba la superposición 
+           y el comportamiento errático en móviles.
+        */
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
@@ -2222,13 +2280,16 @@ footer {
     .guarantee-item,
     .service-list-card {
         max-width: 100%;
-        overflow: hidden;
+        overflow: hidden; /* Esto ya estaba y es correcto */
     }
 
     h1, h2, h3 {
         word-break: break-word;
         hyphens: auto;
     }
+    
+    /* Fin de la corrección de Superposición */
+
 
     /* Performance */
     * {
@@ -2243,3 +2304,4 @@ footer {
 }
 
 /* ========================================
+}

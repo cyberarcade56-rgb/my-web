@@ -6,7 +6,7 @@
     <meta name="description" content="Umbanda y Kimbanda en México. Templo del Pae Roberto de Ogum Onira. Realizamos guía espiritual, amarres de amor, limpias, rituales y tarot.">
     <title>Umbanda México - Pae Roberto de Ogum Onira</title>
     
-    <link rel="stylesheet" href="Styles.css?v=1.2">
+    <link rel="stylesheet" href="Styles-mobile.css?v=2.0">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
@@ -16,19 +16,31 @@
 </head>
 <body>
 
-    <nav class="navbar" id="navbar">
+    <!-- REEMPLAZA tu <nav> actual con este código en TODOS los archivos HTML -->
+<nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
                 <i class="fas fa-om"></i> Umbanda México
             </a>
-            <ul class="nav-menu">
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="nuestra-historia.html">Nuestra Fe</a></li>
-                <li><a href="tarot.html">Tarot</a></li>
-                <li><a href="#contacto" class="nav-cta">Agendar Consulta</a></li>
-            </ul>
-        </div>
-    </nav>
+            
+            <!-- BOTÓN HAMBURGUESA (NUEVO) -->
+            <button class="nav-hamburger" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        
+        
+            
+        
+        <ul class="nav-menu">
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nuestra-historia.html">Nuestra Fe</a></li>
+            <li><a href="tarot.html">Tarot</a></li>
+            <li><a href="index.html#contacto" class="nav-cta">Agendar Consulta</a></li>
+        </ul>
+    </div>
+</nav>
 
     <header class="hero" id="home">
         <div class="hero-overlay"></div>
