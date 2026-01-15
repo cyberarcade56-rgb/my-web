@@ -2260,13 +2260,35 @@ footer {
     transition: all 0.3s ease;
 }
 
-.btn-whatsapp img {
-    width: 35px;        /* Tamaño del logo */
-}
+.btn-whatsapp-flotante {
+        position: fixed; /* ESTO ES LA CLAVE: Hace que flote */
+        bottom: 20px;    /* Distancia desde abajo */
+        right: 20px;     /* Distancia desde la derecha */
+        width: 60px;     /* Tamaño fijo del círculo */
+        height: 60px;    /* Tamaño fijo del círculo */
+        background-color: #25d366; /* Color verde WhatsApp */
+        border-radius: 50%; /* Lo hace redondo */
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.3); /* Sombrita para que resalte */
+        z-index: 9999; /* Se asegura de estar siempre ARRIBA de todo */
+        
+        /* Esto centra el icono dentro del círculo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        /* Animación suave al pasar el mouse */
+        transition: all 0.3s ease;
+    }
 
-.btn-whatsapp:hover {
-    background-color: #128c7e; /* Color un poco más oscuro al pasar el mouse */
-    transform: scale(1.1);      /* Se agranda un poquito */
-}
+    /* Tamaño del icono dentro del botón */
+    .btn-whatsapp-flotante img {
+        width: 35px; /* Tamaño perfecto para que no se vea gigante */
+        height: 35px;
+    }
 
+    /* Efecto al pasar el mouse por encima */
+    .btn-whatsapp-flotante:hover {
+        background-color: #128c7e; /* Verde un poco más oscuro */
+        transform: scale(1.1); /* Se agranda un poquito */
+    }
 /* ========================================
