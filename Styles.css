@@ -2304,22 +2304,5 @@ footer {
     height: 35px;
 }
 
-.btn-whatsapp-flotante:hover {
-    background-color: #128c7e;
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: var(--shadow-glow);
-}
 
-/* Ajuste para móviles muy pequeños */
-@media (max-width: 480px) {
-    .btn-whatsapp-flotante {
-        width: 55px;
-        height: 55px;
-        bottom: 15px;
-        right: 15px;
-    }
-    .btn-whatsapp-flotante img {
-        width: 30px;
-    }
-}
 /* ========================================
