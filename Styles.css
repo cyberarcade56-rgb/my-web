@@ -2241,5 +2241,32 @@ footer {
         box-shadow: var(--shadow-md) !important;
     }
 }
+.btn-whatsapp {
+    position: fixed;
+    bottom: 25px;       /* Distancia del borde de abajo */
+    right: 25px;        /* Distancia del borde derecho */
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;       /* Para que siempre esté arriba de todo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp img {
+    width: 35px;        /* Tamaño del logo */
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e; /* Color un poco más oscuro al pasar el mouse */
+    transform: scale(1.1);      /* Se agranda un poquito */
+}
 
 /* ========================================
