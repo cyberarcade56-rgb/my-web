@@ -2241,68 +2241,11 @@ footer {
         box-shadow: var(--shadow-md) !important;
     }
 }
-.btn-whatsapp {
-    position: fixed;
-    bottom: 25px;       /* Distancia del borde de abajo */
-    right: 25px;        /* Distancia del borde derecho */
-    width: 60px;
-    height: 60px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;       /* Para que siempre esté arriba de todo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-}
 
-.btn-whatsapp-flotante {
-        position: fixed; /* ESTO ES LA CLAVE: Hace que flote */
-        bottom: 20px;    /* Distancia desde abajo */
-        right: 20px;     /* Distancia desde la derecha */
-        width: 60px;     /* Tamaño fijo del círculo */
-        height: 60px;    /* Tamaño fijo del círculo */
-        background-color: #25d366; /* Color verde WhatsApp */
-        border-radius: 50%; /* Lo hace redondo */
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.3); /* Sombrita para que resalte */
-        z-index: 9999; /* Se asegura de estar siempre ARRIBA de todo */
-        
-        /* Esto centra el icono dentro del círculo */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        /* Animación suave al pasar el mouse */
-        transition: all 0.3s ease;
-    }
 
-    /* ========================================
-   BOTÓN FLOTANTE DE WHATSAPP (FIX)
-   ======================================== */
-.btn-whatsapp-flotante {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 65px;
-    height: 65px;
-    background-color: #25d366; /* Verde oficial */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: var(--shadow-lg); /* Usamos tu variable de sombra */
-    z-index: 9999; /* Para que siempre esté por encima de todo */
-    transition: var(--transition-smooth); /* Usamos tu transición suave */
-}
 
-.btn-whatsapp-flotante img {
-    width: 35px;
-    height: 35px;
-}
+
+
 
 
 /* ========================================
