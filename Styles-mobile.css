@@ -2302,7 +2302,16 @@ footer {
         box-shadow: var(--shadow-md) !important;
     }
 }
-/* --- BOTÓN DE WHATSAPP (Pegar al final de Styles-mobile.css) --- */
+/* ========================================
+   BOTÓN DE WHATSAPP GLOBAL (Móvil y PC)
+   ======================================== */
+
+@keyframes whatsapp-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
 .whatsapp-btn {
     position: fixed !important;
     bottom: 25px !important;
@@ -2319,27 +2328,26 @@ footer {
     z-index: 999999 !important;
     text-decoration: none !important;
     box-shadow: 0 4px 15px rgba(0,0,0,0.4) !important;
+    /* Activación de la animación */
+    animation: whatsapp-pulse 2s infinite !important;
+    transition: transform 0.3s ease !important;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1) !important;
 }
 
 .whatsapp-btn i {
     color: white !important;
+    /* Corrección por si el icono se ve descentrado */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
-/* Ocultar tooltip en móviles para evitar errores visuales por ahora */
-.whatsapp-tooltip {
-    display: none !important;
+/* Ocultar tooltip en móviles */
+@media (max-width: 768px) {
+    .whatsapp-tooltip {
+        display: none !important;
+    }
 }
-
-/* Animación de pulso para el botón */
-@keyframes whatsapp-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
-
-.whatsapp-btn {
-    animation: whatsapp-pulse 2s infinite;
-}
-
-/* ========================================
-
