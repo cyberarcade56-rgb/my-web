@@ -2302,6 +2302,33 @@ footer {
         box-shadow: var(--shadow-md) !important;
     }
 }
+/* --- BOTÓN DE WHATSAPP (Pegar al final de Styles-mobile.css) --- */
+.whatsapp-btn {
+    position: fixed !important;
+    bottom: 25px !important;
+    right: 25px !important;
+    width: 60px !important;
+    height: 60px !important;
+    background-color: #25d366 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 35px !important;
+    z-index: 999999 !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4) !important;
+}
+
+.whatsapp-btn i {
+    color: white !important;
+}
+
+/* Ocultar tooltip en móviles para evitar errores visuales por ahora */
+.whatsapp-tooltip {
+    display: none !important;
+}
 
 /* ========================================
 }
