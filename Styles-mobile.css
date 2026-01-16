@@ -2306,6 +2306,10 @@ footer {
    BOTÓN DE WHATSAPP GLOBAL (Móvil y PC)
    ======================================== */
 
+/* ========================================
+   BOTÓN DE WHATSAPP PROFESIONAL
+   ======================================== */
+
 @keyframes whatsapp-pulse {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
     70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
@@ -2324,30 +2328,52 @@ footer {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 35px !important;
+    font-size: 32px !important;
     z-index: 999999 !important;
     text-decoration: none !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4) !important;
-    /* Activación de la animación */
     animation: whatsapp-pulse 2s infinite !important;
     transition: transform 0.3s ease !important;
+}
+
+/* El Tooltip (el texto que se salió) */
+.whatsapp-tooltip {
+    position: absolute !important;
+    right: 75px !important; /* Lo mueve a la izquierda del círculo */
+    background-color: #1a1a1a !important;
+    color: #f7d794 !important; /* Tu color crema/dorado */
+    padding: 8px 15px !important;
+    border-radius: 10px !important;
+    border: 1px solid #D4AF37 !important; /* Tu color acento */
+    font-size: 14px !important;
+    font-family: 'Lato', sans-serif !important;
+    white-space: nowrap !important;
+    opacity: 0 !important; /* Invisible por defecto */
+    visibility: hidden !important;
+    transition: opacity 0.3s, transform 0.3s !important;
+    transform: translateX(10px) !important;
+    pointer-events: none !important;
+}
+
+/* Mostrar tooltip al pasar el mouse (solo en PC) */
+.whatsapp-btn:hover .whatsapp-tooltip {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0) !important;
 }
 
 .whatsapp-btn:hover {
     transform: scale(1.1) !important;
 }
 
-.whatsapp-btn i {
-    color: white !important;
-    /* Corrección por si el icono se ve descentrado */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-/* Ocultar tooltip en móviles */
+/* Ocultar el texto completamente en celulares para que no estorbe */
 @media (max-width: 768px) {
     .whatsapp-tooltip {
         display: none !important;
+    }
+    .whatsapp-btn {
+        width: 55px !important;
+        height: 55px !important;
+        bottom: 20px !important;
+        right: 20px !important;
     }
 }
